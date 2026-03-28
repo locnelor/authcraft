@@ -1,0 +1,52 @@
+{
+  "name": "authcraft",
+  "version": "0.2.0",
+  "description": "authcraft",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "auth",
+    "token",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.13",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/json-bigint": "^1.0.4",
+    "@types/supertest": "^7.2.0",
+    "express": "^5.2.1",
+    "jose": "^6.2.2",
+    "json-bigint": "^1.0.0",
+    "supertest": "^7.2.2"
+  }
+}
